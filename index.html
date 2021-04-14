@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title> My Family Book </title>
+</head>
+
+<body>
+    <h2> My Family Book </h2>
+
+
+<img src= "https://images-na.ssl-images-amazon.com/images/I/51K7T8ZNRTL.jpg" id= "im" height= "350" width= "300"> <br> <br>
+<h4 id= "About"> Click on the "Next" Button to see my family memebers, one by one! </h4>
+
+<button onclick="nxt()" id= "butt"> Next </button>
+&nbsp;&nbsp; 
+<style>
+body {
+    background: linear-gradient( Blue,Purple );
+    text-align: center;
+    font-family: cursive;
+    
+}
+button {
+    background-color: rgb(0, 0, 0);
+    color: lightskyblue;
+    font-family: cursive;
+    border-radius: 13px;
+    font-size: medium;
+
+}
+</style>
+<script>
+var member= [ "https://images-na.ssl-images-amazon.com/images/I/51K7T8ZNRTL.jpg", "https://www.clipartmax.com/png/small/365-3653956_most-people-think-felix-truman-is-a-pretty-ordinary-father-transparent.png", "https://www.prntr.com/images/mom-clipart.jpg", "https://thumbs.dreamstime.com/b/two-teenage-girls-best-friends-hug-stay-close-posing-looking-to-camera-189110221.jpg", "https://i.pinimg.com/originals/d5/6c/d2/d56cd25436d0d3f56ad2f143750f7455.png", "https://webstockreview.net/images/cute-clipart-grandma.jpg" ]
+var Names= ["Click on the Next Button to see my family memebers, one by one!", "This is My Dad, Edward Lestrange", "This is my mom, Elizabeth Lestrange", "This is me and my sister, Esme and Diana Lestrange", "This is my Granpa, William Lestrange", "This is my Grandma, Olivia Lestrange" ]
+var i= 0;
+function nxt() {
+ document.getElementById("im").src= member[i];
+ document.getElementById("About").innerHTML= Names[i];
+
+  i++
+  if (i>6)
+    {i=0}
+  }
+</script>
+
+</body>
+
+</html>
